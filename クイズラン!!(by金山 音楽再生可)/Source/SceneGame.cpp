@@ -34,6 +34,7 @@ void SceneGame::Initialize()
 		enemyManager.Register(slime);
 	}
 
+	//ここで再生用の音楽パス指定
 	//bgm = Audio::Instance().LoadAudioSource("./Data/Audio/MELTY BLOOD SOUND COLLECTION [Disc 1]/02 Actor's Anteroom (AA キャラクターセレクト).wav");
 	bgm = Audio::Instance().LoadAudioSource("./Data/Audio/BGM.wav");
 
