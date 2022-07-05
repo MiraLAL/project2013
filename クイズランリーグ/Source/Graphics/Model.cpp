@@ -64,3 +64,14 @@ void Model::UpdateTransform(const DirectX::XMFLOAT4X4& transform)
 		DirectX::XMStoreFloat4x4(&node.worldTransform, WorldTransform);
 	}
 }
+
+//アニメーション更新処理
+void Model::UpdateAnimetion(float elapsedTime)
+{
+	//再生中でないなら処理しない
+	if (!IsPlayAnimetion()) return;
+
+	//指定のアニメーションデータを取得
+	const std::vector<ModelResource::Animation>& animetions = resource->GetAnimations();
+	
+}

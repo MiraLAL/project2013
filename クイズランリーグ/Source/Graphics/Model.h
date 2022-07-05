@@ -35,7 +35,19 @@ public:
 	// リソース取得
 	const ModelResource* GetResource() const { return resource.get(); }
 
+	//アニメーション更新処理
+	void UpdateAnimetion(float elapsedTime);
+
+	//アニメーション再生
+	void PlayAnimetion(int index);
+
+	//アニメーション再生中か
+	bool IsPlayAnimetion() const;
+
 private:
 	std::shared_ptr<ModelResource>	resource;
 	std::vector<Node>				nodes;
+
+	int currentAnimetionIndex = -1;
+	float currentAnimetionSeconds = 0.0f;
 };
