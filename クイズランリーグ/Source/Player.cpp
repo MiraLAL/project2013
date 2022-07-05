@@ -278,7 +278,7 @@ void Player::InputJump()
 {
     //ボタン入力でジャンプ（ジャンプ回数制限付き)
     GamePad& gamePad = Input::Instance().GetGamePad();
-    if (gamePad.GetButtonDown() & GamePad::BTN_A)
+    if (gamePad.GetButtonDown() & GamePad::BTN_A/*BTN_SPACE*/)
     {
         if (jumpCount < jumpLimit)
         {
