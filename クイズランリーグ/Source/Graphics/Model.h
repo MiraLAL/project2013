@@ -39,10 +39,10 @@ public:
 	void UpdateAnimetion(float elapsedTime);
 
 	//アニメーション再生
-	void PlayAnimetion(int index);
+	//void PlayAnimetion(int index);
 
 	//アニメーション再生中か
-	bool IsPlayAnimetion() const;
+	//bool IsPlayAnimetion() const;
 
 private:
 	std::shared_ptr<ModelResource>	resource;
