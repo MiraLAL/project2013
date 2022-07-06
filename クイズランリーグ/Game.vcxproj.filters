@@ -135,6 +135,9 @@
     <ClInclude Include="Source\SceneTitle.h" />
     <ClInclude Include="Source\SceneManager.h" />
     <ClInclude Include="Source\SceneLoading.h" />
+    <ClInclude Include="Source\String.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\imgui\imgui.cpp">
@@ -258,6 +261,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\SceneLoading.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\String.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
