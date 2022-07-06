@@ -6,6 +6,7 @@
 #include"Scene.h"
 #include"Audio/Audio.h"
 #include"Audio/AudioSource.h"
+#include "Graphics/Sprite.h"
 
 // ÉQÅ[ÉÄÉVÅ[Éì
 class SceneGame : public Scene
@@ -32,4 +33,6 @@ private:
 	CameraController* cameracontroller = nullptr;
 
 	std::unique_ptr<AudioSource>bgm;
+
+	Sprite* font;
 };

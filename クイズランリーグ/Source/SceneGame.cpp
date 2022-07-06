@@ -45,6 +45,8 @@ void SceneGame::Initialize()
 
 	}
 
+	font = new Sprite("Data/Font/font0.png");
+
 	//音楽
 	bgm = Audio::Instance().LoadAudioSource("./Data/Audio/gameover.wav");
 
@@ -179,7 +181,7 @@ void SceneGame::Render()
 
 	// 2Dスプライト描画
 	{
-
+		font->textout(dc, "test", 0, 0, 60, 60, 1, 1, 1, 1);
 	}
 
 	// 2DデバッグGUI描画
