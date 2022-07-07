@@ -1,4 +1,4 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <WICTextureLoader.h>
 #include "Sprite.h"
 #include "Misc.h"
@@ -355,6 +355,7 @@ void Sprite::Render(ID3D11DeviceContext *immediate_context,
 	}
 }
 
+
 void Sprite::textout(ID3D11DeviceContext* immediate_context,
 	std::string s,
 	float x, float y, float w, float h,
@@ -380,4 +381,23 @@ void Sprite::textout(ID3D11DeviceContext* immediate_context,
 		// 文字位置を幅分ずらす
 		carriage += w;
 	}
+}
+
+void Sprite::textout_ja(ID3D11DeviceContext* immediate_context,
+	std::string s,
+	float x, float y, float w, float h,
+	float r, float g, float b, float a)
+{
+
+#if false
+	s = "あいうえおクイズ";
+
+	for (const char* c : s)
+	{
+		if  (c == "あ")
+		{
+			textout(immediate_context, "a", x, y, x, h, r, g, b, a);
+		}
+	}
+#endif
 }

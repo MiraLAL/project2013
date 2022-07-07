@@ -35,7 +35,25 @@ public:
 	// テクスチャ高さ取得
 	int GetTextureHeight() const { return textureHeight; }
 
+
+
+	/// <summary>
+	/// アルファベット表示用
+	/// </summary>
 	void textout(ID3D11DeviceContext* immediate_context,
+		std::string s,
+		float x, float y, float w, float h,
+		float r, float g, float b, float a);
+
+	/// <summary>
+	/// ひらがな表示用
+	/// </summary>
+	void textout_hiragana(ID3D11DeviceContext* immediate_context,
+		std::string s,
+		float x, float y, float w, float h,
+		float r, float g, float b, float a);
+
+	void textout_kanzi(ID3D11DeviceContext* immediate_context,
 		std::string s,
 		float x, float y, float w, float h,
 		float r, float g, float b, float a);

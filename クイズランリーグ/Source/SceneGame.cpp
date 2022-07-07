@@ -181,7 +181,9 @@ void SceneGame::Render()
 
 	// 2Dスプライト描画
 	{
+
 		font->textout(dc, "test", 0, 0, 60, 60, 1, 1, 1, 1);
+
 	}
 
 	// 2DデバッグGUI描画
