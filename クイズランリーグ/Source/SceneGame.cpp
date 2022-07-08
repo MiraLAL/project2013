@@ -191,4 +191,24 @@ void SceneGame::Render()
 		//プレイヤーデバッグ描画
 		player->DrawDebugGUI();
 	}
+
+	ImGui::SetNextWindowPos (ImVec2(970, 190), ImGuiCond_Once);
+	ImGui::SetNextWindowSize(ImVec2(300, 400), ImGuiCond_Once);
+
+	if (ImGui::Begin("parameter", nullptr, ImGuiWindowFlags_None))
+	{
+		if (ImGui::InputFloat(u8"p0p1の距離", &length))
+		{
+		}
+		if (collisionFlg)
+		{
+			ImGui::Checkbox(u8"AABBは平面と交わっている", &collisionFlg);
+		}
+		else
+		{
+			ImGui::Checkbox(u8"AABBは平面と交わっていない", &collisionFlg);
+		}
+	}
+	ImGui::End();
+
 }
