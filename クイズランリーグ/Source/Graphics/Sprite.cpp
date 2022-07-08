@@ -383,7 +383,7 @@ void Sprite::textout(ID3D11DeviceContext* immediate_context,
 	}
 }
 
-void Sprite::textout_ja(ID3D11DeviceContext* immediate_context,
+void Sprite::textout_hiragana(ID3D11DeviceContext* immediate_context,
 	std::string s,
 	float x, float y, float w, float h,
 	float r, float g, float b, float a)
@@ -400,4 +400,11 @@ void Sprite::textout_ja(ID3D11DeviceContext* immediate_context,
 		}
 	}
 #endif
+}
+
+void textout_kanzi(ID3D11DeviceContext* immediate_context,
+	std::string s,
+	float x, float y, float w, float h,
+	float r, float g, float b, float a)
+{
 }
