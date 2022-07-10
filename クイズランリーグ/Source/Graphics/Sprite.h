@@ -46,13 +46,14 @@ public:
 		float r, float g, float b, float a);
 
 	/// <summary>
-	/// ひらがな表示用
+	/// ひらがな表示用:途中
 	/// </summary>
 	void textout_hiragana(ID3D11DeviceContext* immediate_context,
 		std::string s,
 		float x, float y, float w, float h,
 		float r, float g, float b, float a);
 
+	//漢字表示用:途中
 	void textout_kanzi(ID3D11DeviceContext* immediate_context,
 		std::string s,
 		float x, float y, float w, float h,
