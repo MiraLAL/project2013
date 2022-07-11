@@ -192,23 +192,5 @@ void SceneGame::Render()
 		player->DrawDebugGUI();
 	}
 
-	ImGui::SetNextWindowPos (ImVec2(970, 190), ImGuiCond_Once);
-	ImGui::SetNextWindowSize(ImVec2(300, 400), ImGuiCond_Once);
-
-	if (ImGui::Begin("parameter", nullptr, ImGuiWindowFlags_None))
-	{
-		if (ImGui::InputFloat(u8"p0p1‚Ì‹——£", &length))
-		{
-		}
-		if (collisionFlg)
-		{
-			ImGui::Checkbox(u8"AABB‚Í•½–Ê‚ÆŒð‚í‚Á‚Ä‚¢‚é", &collisionFlg);
-		}
-		else
-		{
-			ImGui::Checkbox(u8"AABB‚Í•½–Ê‚ÆŒð‚í‚Á‚Ä‚¢‚È‚¢", &collisionFlg);
-		}
-	}
-	ImGui::End();
 
 }
