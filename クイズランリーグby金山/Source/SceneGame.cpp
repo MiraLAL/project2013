@@ -183,6 +183,8 @@ void SceneGame::Render()
 	{
 
 		font->textout(dc, "test", 0, 0, 60, 60, 1, 1, 1, 1);
+		font->textout_hiragana(dc, "‚Ä‚·‚Æ", 80, 80, 60, 60, 1, 1, 1, 1);
+
 
 	}
 
