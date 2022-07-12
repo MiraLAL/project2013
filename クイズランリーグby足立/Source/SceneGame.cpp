@@ -56,6 +56,8 @@ void SceneGame::Initialize()
 	//スプライト初期化
 	Gamesprite = new Sprite("Data/Sprite/sankaku02.jpg");
 
+	font = new Sprite("Data/Font/font0.png");
+
 	//音楽
 	bgm = Audio::Instance().LoadAudioSource("./Data/Audio/BGM/BGM.wav");
 
@@ -97,6 +99,12 @@ void SceneGame::Finalize()
 	}
 
 	EnemyManager::Instance().Clear();
+
+	if (font != nullptr)
+	{
+		delete font;
+		font = nullptr;
+	}
 }
 
 // 更新処理
@@ -221,6 +229,7 @@ void SceneGame::Render()
 
 	// 2Dスプライト描画
 	{
+		font->textout(dc, "Type:Kanzi", 0, 0, 30, 30, 1, 1, 1, 1);
 
 	}
 

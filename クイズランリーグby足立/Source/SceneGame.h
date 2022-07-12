@@ -38,4 +38,6 @@ private:
 	std::unique_ptr<AudioSource>bgm;
 
 	int timer;
+
+	Sprite* font;
 };
