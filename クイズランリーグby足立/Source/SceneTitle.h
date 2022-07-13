@@ -25,6 +25,7 @@ public:
 
 private:
     Sprite* sprite = nullptr;
+    Sprite* font = nullptr;
 
     std::unique_ptr<AudioSource>ticall;  //タイトルコール
 

@@ -15,6 +15,8 @@ void SceneTitle::Initialize()
 
     ticall->Play(false);
 
+    font = new Sprite("Data/Font/font0.png");
+
 }
 
 //I—¹‰»
@@ -76,6 +78,10 @@ void SceneTitle::Render()
             0, 0, textureWidth, textureHeight,
             0,
             1, 1, 1, 1);
+
+        //ƒ^ƒCƒgƒ‹‰æ‘œ‚É‰B‚ê‚Ä•`‰æ“r’†‚Å‚«‚È‚¢?
+        font->textout(dc, "Type:Kanzi", 0, 0, 30, 30, 1, 1, 1, 1);
+        font->textout(dc, "Type:Kanzi", 428, 360, 30, 30, 1, 1, 1, 1);
 
 
     }
