@@ -28,6 +28,13 @@ void SceneTitle::Finalize()
         delete sprite;
         sprite = nullptr;
     }
+
+    if (font != nullptr)
+    {
+        delete font;
+        font = nullptr;
+    }
+
 }
 
 //更新処理
@@ -72,18 +79,18 @@ void SceneTitle::Render()
         float textureWidth = static_cast<float>(sprite->GetTextureWidth());
         float textureHeight = static_cast<float>(sprite->GetTextureHeight());
 
-        //タイトルスプライト描画
-        sprite->Render(dc,
-            0, 0, screenWidth, screenHeight,
-            0, 0, textureWidth, textureHeight,
-            0,
-            1, 1, 1, 1);
-
-        //タイトル画像に隠れて描画途中できない?
-        font->textout(dc, "Type:Kanzi", 0, 0, 30, 30, 1, 1, 1, 1);
-        font->textout(dc, "Type:Kanzi", 428, 360, 30, 30, 1, 1, 1, 1);
+        ////タイトルスプライト描画
+        //sprite->Render(dc,
+        //    0, 0, screenWidth, screenHeight,
+        //    0, 0, textureWidth, textureHeight,
+        //    0,
+        //    1, 1, 1, 1);
 
 
     }
+    //タイトル画像に隠れて描画できない?
+    font->textout(dc, "Common Sense", 0, 360, 60, 60, 1, 1, 1, 1);
+    font->textout(dc, "Kanzi", 428, 360, 60, 60, 1, 1, 1, 1);
+    font->textout(dc, "Otaku", 853, 360, 60, 60, 1, 1, 1, 1);
 
 }
