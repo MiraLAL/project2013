@@ -374,8 +374,8 @@ void Sprite::textout(ID3D11DeviceContext* immediate_context,
 		Render(immediate_context,
 			x + carriage, y, w, h,
 			sw * (c & 0x0F), sh * (c >> 4), sw, sh,
-			r, g, b, a,
-			0);
+			0,
+			r, g, b, a);
 
 		// •¶šˆÊ’u‚ğ••ª‚¸‚ç‚·
 		carriage += w;

@@ -9,14 +9,14 @@
 void SceneTitle::Initialize()
 {
     //スプライト初期化
-    sprite = new Sprite("Data/Sprite/1590939956.jpg");
+    //sprite = new Sprite("Data/Sprite/1590939956.jpg");
+    sprite2 = new Sprite("Data/Sprite/b868f597cae39891.jpg");
 
     ticall = Audio::Instance().LoadAudioSource("./Data/Audio/SE/タイトルコール.wav");
 
     ticall->Play(false);
 
     font = new Sprite("Data/Font/font0.png");
-
 }
 
 //終了化
@@ -28,6 +28,13 @@ void SceneTitle::Finalize()
         delete sprite;
         sprite = nullptr;
     }
+
+    if (sprite2 != nullptr)
+    {
+        delete sprite2;
+        sprite2 = nullptr;
+    }
+
 
     if (font != nullptr)
     {
@@ -79,18 +86,26 @@ void SceneTitle::Render()
         float textureWidth = static_cast<float>(sprite->GetTextureWidth());
         float textureHeight = static_cast<float>(sprite->GetTextureHeight());
 
-        ////タイトルスプライト描画
+        //タイトルスプライト描画
         //sprite->Render(dc,
         //    0, 0, screenWidth, screenHeight,
         //    0, 0, textureWidth, textureHeight,
         //    0,
         //    1, 1, 1, 1);
 
+#if true
+        sprite2->Render(dc,
+            0, 30, screenWidth, screenHeight/2/2,
+            0, 0, 1161, 153,
+            0,
+            1, 1, 1, 1);
+#endif
+        //タイトル画像に隠れて描画できない?
+        font->textout(dc, "Common Sense", 0, 360, 60, 60, 1, 1, 1, 1);
+        font->textout(dc, "Kanzi", 428, 360, 60, 60, 1, 1, 1, 1);
+        font->textout(dc, "Otaku", 853, 360, 60, 60, 1, 1, 1, 1);
+
 
     }
-    //タイトル画像に隠れて描画できない?
-    font->textout(dc, "Common Sense", 0, 360, 60, 60, 1, 1, 1, 1);
-    font->textout(dc, "Kanzi", 428, 360, 60, 60, 1, 1, 1, 1);
-    font->textout(dc, "Otaku", 853, 360, 60, 60, 1, 1, 1, 1);
 
 }
