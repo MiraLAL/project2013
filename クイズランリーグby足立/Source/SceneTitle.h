@@ -23,9 +23,20 @@ public:
     //描画処理
     void Render() override;
 
+    enum Type
+    {
+        ゲーム・アニメ, //0
+        一般常識,//1
+        漢字,//2
+    };
+    
+
 private:
-    Sprite* sprite = nullptr;
-    Sprite* sprite2 = nullptr;
+    //Sprite* sprite  = nullptr;
+    //Sprite* sprite2 = nullptr;
+    //Sprite* sprite3 = nullptr;
+    Sprite* sprite[5];
+
     Sprite* font = nullptr;
 
     std::unique_ptr<AudioSource>ticall;  //タイトルコール
